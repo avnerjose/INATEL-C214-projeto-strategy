@@ -29,7 +29,8 @@ Os algoritmos implementados foram:
 
 1 - Clone o repositório
 
-``` 
+``` bash
+git clone https://github.com/avnerjose/INATEL-C214-projeto-strategy.git && cd INATEL-C214-projeto-strategy
 ```
 
 2 - Execute o projeto
