@@ -7,8 +7,12 @@ class SortingQuickSort<T> implements ISorting<T> {
     let pivot = list[Math.round((left + right) / 2)];
 
     do {
-      while (list[left++] < pivot);
-      while (list[right--] > pivot);
+      while (list[left] < pivot) {
+        left++;
+      }
+      while (list[right] > pivot) {
+        right--;
+      }
 
       if (left <= right) {
         [list[left], list[right]] = [list[right], list[left]];
@@ -17,8 +21,8 @@ class SortingQuickSort<T> implements ISorting<T> {
       }
     } while (left <= right);
 
-    if (right - start >= 0) return this.sort(list, start, right);
-    if (end - left >= 0) return this.sort(list, left, end);
+    if (right - start >= 0) this.sort(list, start, right);
+    if (end - left >= 0) this.sort(list, left, end);
 
     return list;
   }
